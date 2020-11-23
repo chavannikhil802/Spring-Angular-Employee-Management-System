@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
+import { EmployeeService } from '../service/employee.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -11,7 +12,7 @@ export class EmployeeListComponent implements OnInit {
   // employees will be used to display the data in employee-list.component.html
   employees: Employee[];
 
-  constructor() { }
+  constructor(private employeeService : EmployeeService) { }
 
   ngOnInit(): void {
     this.employees = [{
