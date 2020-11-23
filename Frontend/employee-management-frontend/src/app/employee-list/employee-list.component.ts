@@ -15,26 +15,8 @@ export class EmployeeListComponent implements OnInit {
   constructor(private employeeService : EmployeeService) { }
 
   ngOnInit(): void {
+    // Method will be called when the page will be loaded
     this.getEmployees();
-
-    // this.employees = [{
-    //   "id" : 1,
-    //   "firstName" : "Nikhil",
-    //   "lastName" : "Chavan",
-    //   "emailId" : "nikhil@gmail.com"
-    // },
-    // {
-    //   "id" : 2,
-    //   "firstName" : "Neha",
-    //   "lastName" : "Chavan",
-    //   "emailId" : "neha@gmail.com"
-    // },
-    // {
-    //   "id" : 3,
-    //   "firstName" : "Narendra",
-    //   "lastName" : "Chavan",
-    //   "emailId" : "narendra@gmail.com"
-    // }];
   }
 
   private getEmployees() {
