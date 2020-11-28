@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from '../employee';
 import { EmployeeService } from '../service/employee.service';
 
@@ -14,7 +14,8 @@ export class UpdateEmployeeComponent implements OnInit {
   employee = new Employee();
 
   constructor(private employeeService : EmployeeService,
-    private route : ActivatedRoute) { }
+    private route : ActivatedRoute,
+    private router : Router) { }
 
   ngOnInit(): void {
 
@@ -27,5 +28,9 @@ export class UpdateEmployeeComponent implements OnInit {
       this.employee = data;
     },
     error => console.log(error));
+  }
+
+  navigate() {
+    this.router.navigate(['employees']);
   }
 }
