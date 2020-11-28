@@ -22,7 +22,8 @@ export class EmployeeService {
     return this.httpClient.post(`${this.baseUrl}`,employee);
   }
 
-  //Sevice to get Employe By Id
+  //Sevice to get Employe By Id for displaying data in Update Employee Form
+  // Passing EMployee Id as a parameter in the URL
   getEmployeeById(id : number) : Observable<Employee> {
     return this.httpClient.get<Employee>(`${this.baseUrl}/${id}`);
   }

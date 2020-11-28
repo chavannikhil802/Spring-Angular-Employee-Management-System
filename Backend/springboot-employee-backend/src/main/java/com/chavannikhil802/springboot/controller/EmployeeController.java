@@ -38,6 +38,7 @@ public class EmployeeController {
 	}
 	
 	// Fetch the id of the employee
+	// Used to display the Employee Data in Update Employee Form
 	@GetMapping("employees/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
 		Employee employee = employeeRepository.
